@@ -59,6 +59,9 @@ static void test_parse_unix_time(void) {
   t1 = nr_parse_unix_time("1368811467146000");
   tlib_pass_if_true("parse unix time", 1368811467146000ULL == t1,
                     "t1=" NR_TIME_FMT, t1);
+  t1 = nr_parse_unix_time("1631198283885626");
+  tlib_pass_if_true("parse unix time", 1631198283885626ULL == t1,
+                    "t1=" NR_TIME_FMT, t1);
 
   /*
    * Milliseconds
